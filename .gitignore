@@ -1,0 +1,9 @@
+/html/
+/db_data/
+/certs/
+*.sql
+*.sql.gz
+*.bak
+*.old
+.DS_Store
+Thumbs.db
