@@ -48,7 +48,8 @@ RUN apk add --no-cache \
     optipng \
     pngquant \
     gifsicle \
-    nodejs
+    nodejs \
+    mariadb-client
 
 # Copy globally installed SVGO and compiled extensions from the builder stage
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
