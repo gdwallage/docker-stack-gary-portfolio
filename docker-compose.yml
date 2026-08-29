@@ -1,39 +1,6 @@
 version: '3.9'
 
 services:
-  db:
-    image: mariadb:11.4
-    command:
-      - --innodb-buffer-pool-size=512M
-      - --max-connections=100
-      - --slow-query-log=1
-      - --long-query-time=2
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: gary_portfolio
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: password
-    volumes:
-      - /opt/docker-stacks/gary-portfolio/db_data:/var/lib/mysql
-      - /opt/docker-stacks/gary-portfolio/certs:/etc/mysql/certs:ro
-    networks:
-      - zone_internal
-    healthcheck:
-      test: ["CMD-SHELL", "mariadb-admin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 30s
-    deploy:
-      replicas: 0
-      resources:
-        limits:
-          cpus: '2'
-          memory: 1G
-      placement:
-        constraints:
-          - node.hostname == ubuntu-server
-
   wordpress:
     image: gary-portfolio-local:latest
     user: "2000:2000"
