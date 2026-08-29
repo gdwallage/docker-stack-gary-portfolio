@@ -49,7 +49,12 @@ RUN apk add --no-cache \
     pngquant \
     gifsicle \
     nodejs \
-    mariadb-client
+    mariadb-client \
+    curl
+
+# Install WP-CLI into runtime
+RUN curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+    chmod +x /usr/local/bin/wp
 
 # Copy globally installed SVGO and compiled extensions from the builder stage
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
