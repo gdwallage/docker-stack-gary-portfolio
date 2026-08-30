@@ -1,4 +1,18 @@
-/html/
+# WordPress Core & Dynamic Data
+/html/wp-admin/
+/html/wp-includes/
+/html/*.php
+/html/license.txt
+/html/readme.html
+/html/wp-config.php
+
+# Media Uploads & Caches (Persisted via Docker Volume, excluded from git)
+/html/wp-content/uploads/
+/html/wp-content/cache/
+/html/wp-content/upgrade/
+/html/wp-content/wflogs/
+
+# Standard Ignores
 /db_data/
 /certs/
 *.sql
