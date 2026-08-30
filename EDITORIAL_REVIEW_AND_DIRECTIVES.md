@@ -64,6 +64,10 @@ The good news: where services **are** live, real GBP pricing is showing (not `£
 
 `.gitignore` line 1 excludes `/html/` wholesale — every theme, plugin, and content change across all 7 sites (including the CSS work I'm about to do) has **no version history and no rollback path**. Recommend carving out an allowlist for theme/plugin code (`html/wp-content/themes/`, `html/wp-content/mu-plugins/` etc.) while keeping uploads/cache/core excluded, so editorial and infra work on the actual sites is trackable the same way this backlog is. Flagging rather than just doing it myself since it touches your build/deploy assumptions — let me know if there's a reason it's excluded (e.g. size, secrets in wp-config) before I change it.
 
-## 5. What I'm Doing Next
+## 5. Tracking
+
+Every item above is now filed as an individual GitHub issue (#8-#34) using the existing `[Design/Claude]` / `[DevOps/Antigravity]` convention, so this doc isn't the source of truth going forward — the issue tracker is. Highest priority: **#8, a full QA pass on wedding.garywallage.uk** (Gary wants it 100% perfect and fully functional before further polish elsewhere), followed by #9 (family homepage citation artifacts — visibly broken right now).
+
+## 6. What I'm Doing Next
 
 Starting the Work Item 1 CSS pass (typography, spacing, micro-interactions) on the 6 non-wedding child themes, using `gary-wedding-pro` as the structural reference and each site's existing color tokens — per Gary's direct instruction. Will hold off touching copy/content (items in Section 1) until we've confirmed where that text is actually generated, so fixes don't get overwritten by the next automation run.
