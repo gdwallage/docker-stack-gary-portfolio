@@ -40,6 +40,9 @@ def convert_cr2_to_web(cr2_path, output_dir, base_name=None, quality=85):
             cmd_convert = ["convert", f"{cr2_path}[0]", "-quality", "95", str(tmp_jpg)]
             subprocess.run(cmd_convert, check=True)
             
+        # 1b. Auto-orient the extracted JPEG to bake in orientation for portrait/landscape
+        subprocess.run(["mogrify", "-auto-orient", str(tmp_jpg)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            
         # 2. Generate Responsive WebP Images
         sizes = [
             (1920, f"{base_name}-1920w.webp"),
