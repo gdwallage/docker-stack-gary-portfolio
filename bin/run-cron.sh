@@ -6,11 +6,11 @@
 SITES=(
     "https://staging.garywallage.uk"
     "https://wedding.garywallage.uk"
-    "http://family.garywallage.uk"
-    "http://fashion.garywallage.uk"
-    "http://cosplay.garywallage.uk"
-    "http://glamour.garywallage.uk"
-    "http://boudoir.garywallage.uk"
+    "https://family.garywallage.uk"
+    "https://fashion.garywallage.uk"
+    "https://cosplay.garywallage.uk"
+    "https://glamour.garywallage.uk"
+    "https://boudoir.garywallage.uk"
 )
 
 # Find active WordPress Swarm container
