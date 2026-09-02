@@ -3,6 +3,15 @@
 # Gary Wallage WordPress Multisite Dynamic Swarm Cron Runner
 # ==============================================================================
 
+# Prevent overlapping runs: if a previous invocation is still mid-flight
+# (e.g. a slow GMS sync scan) when the next 5-minute tick fires, skip this
+# tick entirely rather than stacking another full pass on top of it. Without
+# this, invocations pile up indefinitely under load and each one competes
+# for the same DB/CPU, making every one of them slower still.
+LOCKFILE="/tmp/gw-run-cron.lock"
+exec 200>"$LOCKFILE"
+flock -n 200 || { echo "[$(date)] Skipping run: previous invocation still in progress." >&2; exit 0; }
+
 SITES=(
     "https://garywallage.uk"
     "https://wedding.garywallage.uk"

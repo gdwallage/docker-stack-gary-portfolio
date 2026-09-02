@@ -15,6 +15,7 @@
 # Standard Ignores
 /db_data/
 /certs/
+/bin/repair-gallery-images.log
 *.sql
 *.sql.gz
 *.bak
