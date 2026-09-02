@@ -4,7 +4,7 @@
 # ==============================================================================
 
 SITES=(
-    "https://staging.garywallage.uk"
+    "https://garywallage.uk"
     "https://wedding.garywallage.uk"
     "https://family.garywallage.uk"
     "https://fashion.garywallage.uk"
