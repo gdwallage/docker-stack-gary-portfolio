@@ -78,3 +78,21 @@
 - `gdwallage/wp-multisite-gary-cosplay-pro` (v1.0.8)
 - `gdwallage/wp-multisite-gary-glamour-pro` (v1.0.8)
 - `gdwallage/docker-stack-gary-portfolio`
+
+### 6. Live Page Cleanup & Top-Level 5-Slot Nav Rollout (Evening Update)
+- **Wedding Duplicate About Me**: Trashed duplicate post ID 12 (`/home/about-me/`) and implemented an automatic 301 redirect in `inc/setup.php` pointing to active, live page ID 8160 (`/about-me/`).
+- **Portrait Master Gateway (Blog 1) Architecture Aligned (Option B)**:
+  - Retired/drafted external directory hub links (IDs 111–117).
+  - Configured Primary Menu to point to local genre content: Services & Packages (56), The Experience (55), About Me (8), Client Reviews (4754), FAQ & Client Guide (57).
+  - Cross-genre jumping is now cleanly handled site-wide by the global header genre bar.
+- **Client Reviews Integration (`page-reviews.php`)**:
+  - Created high-fidelity editorial template `page-reviews.php` supporting quotes and client attribution in parent theme.
+  - Published bespoke, genre-specific Client Reviews pages with verified featured images across all 7 blogs.
+- **Standardized Top-Level Primary Nav (5 Core Slots + Contact Button)**:
+  1. `Services & Packages`
+  2. `The Experience` / `Love Stories`
+  3. `About Me`
+  4. `Client Reviews`
+  5. `FAQ & Client Guide`
+  *(Contact inquiry modal remains accessible via the persistent header CTA button)*
+- **Hero Slider Parity**: Every single sub-site now serves exactly 5 top-level cinematic hero slides.
