@@ -4,6 +4,8 @@
 **Date**: 30 August 2026
 **Status**: Design spec for a 100% new plugin feature. Gary confirmed: FB Pages + linked IG Business accounts already exist per site, and a Meta Developer App/Business Manager already exists. This is a build spec, not exploratory research — implementation is Antigravity's, per the standing content-vs-code split ([[feedback_content_only_no_code]]).
 
+> **⚠️ Superseded in part — 2026-09-10.** The UI/UX design below (§4) stands as-is. But §2's Graph API integration is being consolidated with `gary-50-project`'s social agent into one standalone service, [`docker-stack-social-robot`](https://github.com/gdwallage/docker-stack-social-robot), instead of this plugin independently maintaining its own Meta Graph client long-term. `class-gw-social-api.php`'s direct Graph calls are being migrated to call that service instead — see [wp-plugin-gw-social-client#1](https://github.com/gdwallage/wp-plugin-gw-social-client/issues/1) and [issue #63](https://github.com/gdwallage/docker-stack-gary-portfolio/issues/63) in this repo for the full rationale and phased, pilot-site-first migration plan. §5 (Audience Health) and §1/§6 (App Review, token security) are unaffected.
+
 ---
 
 ## Scope ruling: admin-side only, not public-facing
